@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guillaume Simon | Portfolio</title>
 <meta name="description" content="Portfolio Guillaume Simon - Communication, Marketing, Direction Artistique, Digital">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SNMJKEX2Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SNMJKEX2Y8');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
 <style>
@@ -12,94 +20,95 @@
   --bg:#0A0A0A;--bg2:#111;--bg3:#1A1A1A;
   --accent:#E8A020;--accent2:#F4C56A;
   --text:#EFEFEF;--muted:#777;--border:#252525;--white:#fff;
-  --ch:300px;
+  --ch:320px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:17px}
+html{scroll-behavior:smooth;font-size:19px}
 body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;padding:0 40px}
-.nav-logo{font-weight:700;font-size:1.05rem;color:var(--white);text-decoration:none;letter-spacing:.3px;flex-shrink:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:62px;display:flex;align-items:center;padding:0 44px}
+.nav-logo{font-weight:700;font-size:1rem;color:var(--white);text-decoration:none;letter-spacing:.3px;flex-shrink:0}
 .nav-logo span{color:var(--accent)}
-.nav-links{flex:1;display:flex;justify-content:center;align-items:center;gap:40px;list-style:none}
-.nav-links a{font-size:0.75rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color .2s;white-space:nowrap}
+.nav-links{flex:1;display:flex;justify-content:center;align-items:center;gap:44px;list-style:none}
+.nav-links a{font-size:0.72rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--accent)}
 
 /* HERO */
-#hero{min-height:100vh;display:flex;align-items:center;padding:110px 48px 68px;position:relative;overflow:hidden}
+#hero{min-height:100vh;display:flex;align-items:center;padding:116px 52px 72px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 68% 50%,rgba(232,160,32,0.06) 0%,transparent 55%);pointer-events:none}
-.hero-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:center;width:100%}
-.hero-eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:block}
-.hero-name{font-size:clamp(3.2rem,6vw,5.8rem);font-weight:700;line-height:.95;color:var(--white);margin-bottom:8px;letter-spacing:-2px}
+.hero-grid{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 310px;gap:68px;align-items:center;width:100%}
+.hero-eyebrow{font-size:0.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:block}
+.hero-name{font-size:clamp(3rem,5.5vw,5.5rem);font-weight:700;line-height:.95;color:var(--white);margin-bottom:8px;letter-spacing:-2px}
 .hero-name span{color:var(--accent)}
-.hero-title{font-size:0.82rem;font-weight:400;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.hero-title{font-size:0.78rem;font-weight:400;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
-.badge{font-size:0.66rem;font-weight:500;padding:4px 10px;border-radius:3px;background:rgba(232,160,32,0.08);border:1px solid rgba(232,160,32,0.2);color:var(--accent)}
-.hero-desc{font-size:0.95rem;color:#999;line-height:1.75;max-width:460px;margin-bottom:30px;font-weight:300}
+.badge{font-size:0.63rem;font-weight:500;padding:4px 10px;border-radius:3px;background:rgba(232,160,32,0.08);border:1px solid rgba(232,160,32,0.2);color:var(--accent)}
+.hero-desc{font-size:0.9rem;color:#999;line-height:1.75;max-width:460px;margin-bottom:30px;font-weight:300}
 .hero-btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn-solid{display:inline-block;background:var(--accent);color:#000;font-weight:600;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;padding:11px 22px;border-radius:3px;text-decoration:none;transition:background .2s,transform .2s}
+.btn-solid{display:inline-block;background:var(--accent);color:#000;font-weight:600;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;padding:11px 22px;border-radius:3px;text-decoration:none;transition:background .2s,transform .2s}
 .btn-solid:hover{background:var(--accent2);transform:translateY(-1px)}
-.btn-ghost{display:inline-block;border:1px solid var(--border);color:var(--muted);font-weight:500;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;padding:11px 22px;border-radius:3px;text-decoration:none;transition:border-color .2s,color .2s}
+.btn-ghost{display:inline-block;border:1px solid var(--border);color:var(--muted);font-weight:500;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;padding:11px 22px;border-radius:3px;text-decoration:none;transition:border-color .2s,color .2s}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-.hero-photo{width:250px;height:250px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 50px rgba(232,160,32,0.1);display:block;margin:0 auto}
-.hero-stats{display:flex;gap:28px;margin-top:32px;padding-top:26px;border-top:1px solid var(--border);flex-wrap:wrap}
+.hero-photo{width:260px;height:260px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 50px rgba(232,160,32,0.1);display:block;margin:0 auto}
+.hero-stats{display:flex;gap:30px;margin-top:32px;padding-top:26px;border-top:1px solid var(--border);flex-wrap:wrap}
 .stat-num{font-size:1.5rem;font-weight:700;color:var(--accent);letter-spacing:-1px}
-.stat-label{font-size:0.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.stat-label{font-size:0.63rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
 
 /* LAYOUT */
-.wrap{padding:88px 48px;max-width:1140px;margin:0 auto}
-.divider{height:1px;background:var(--border);max-width:1140px;margin:0 auto}
-.s-tag{font-size:0.66rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;display:block}
-.s-title{font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;color:var(--white);line-height:1.1;letter-spacing:-1px}
+.wrap{padding:92px 52px;max-width:1160px;margin:0 auto}
+.divider{height:1px;background:var(--border);max-width:1160px;margin:0 auto}
+.s-tag{font-size:0.63rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;display:block}
+.s-title{font-size:clamp(1.9rem,2.8vw,2.6rem);font-weight:700;color:var(--white);line-height:1.1;letter-spacing:-1px}
 .s-title span{color:var(--accent)}
-.s-sub{font-size:0.88rem;color:var(--muted);margin-top:8px;font-weight:300}
-.s-head{margin-bottom:40px}
+.s-sub{font-size:0.84rem;color:var(--muted);margin-top:8px;font-weight:300}
+.s-head{margin-bottom:42px}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.about-text{font-size:0.92rem;color:#AAA;line-height:1.85;font-weight:300}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+.about-text{font-size:0.88rem;color:#AAA;line-height:1.85;font-weight:300}
 .about-text p{margin-bottom:14px}
+.about-note{font-size:0.82rem;color:#666;font-style:italic;margin-top:6px}
 .pills{display:flex;flex-wrap:wrap;gap:6px}
-.pill{font-size:0.72rem;font-weight:500;padding:5px 11px;border-radius:3px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);transition:border-color .2s,color .2s;cursor:default}
+.pill{font-size:0.7rem;font-weight:500;padding:5px 11px;border-radius:3px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);transition:border-color .2s,color .2s;cursor:default}
 .pill:hover{border-color:var(--accent);color:var(--accent)}
 
 /* VIDEOS */
 .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .vcard{background:var(--bg3);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color .2s}
 .vcard:hover{border-color:rgba(232,160,32,0.3)}
-.vthumb{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;cursor:pointer;text-decoration:none;display:block}
+.vthumb{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;cursor:pointer;display:block}
 .vthumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s;display:block}
 .vthumb:hover img{transform:scale(1.04)}
 .vplay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,0.28);transition:background .2s}
 .vthumb:hover .vplay{background:rgba(0,0,0,0.48)}
 .vplay-circle{width:46px;height:46px;background:rgba(232,160,32,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:6px}
 .vplay-circle svg{width:16px;height:16px;fill:#000;margin-left:3px}
-.vplay-label{font-size:0.65rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.75)}
+.vplay-label{font-size:0.62rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.75)}
 .viframe{width:100%;aspect-ratio:16/9}
 .viframe iframe{width:100%;height:100%;border:none;display:block}
 .vinfo{padding:10px 13px}
-.vsrc{font-size:0.63rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
-.vlbl{font-size:0.82rem;color:var(--text);font-weight:400}
+.vsrc{font-size:0.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.vlbl{font-size:0.8rem;color:var(--text);font-weight:400}
 
 /* CAROUSELS */
-.cwrap{margin-bottom:40px}
+.cwrap{margin-bottom:42px}
 .chead{margin-bottom:12px}
-.ctitle{font-size:1rem;font-weight:600;color:var(--white);letter-spacing:-0.2px}
-.csub{font-size:0.76rem;color:var(--muted);margin-top:3px;font-weight:300}
+.ctitle{font-size:0.98rem;font-weight:600;color:var(--white);letter-spacing:-0.2px}
+.csub{font-size:0.74rem;color:var(--muted);margin-top:3px;font-weight:300}
 .carousel{background:var(--bg3);border:1px solid var(--border);border-radius:6px;overflow:hidden}
 .cbody{display:grid;grid-template-columns:1fr 1fr;height:var(--ch)}
 .cimg{background:#0D0D0D;overflow:hidden;display:flex;align-items:center;justify-content:center;height:var(--ch);flex-shrink:0}
 .cimg img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;display:block}
-.cinfo{padding:24px 26px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;height:var(--ch)}
+.cinfo{padding:26px 28px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;height:var(--ch)}
 .ctags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
-.ctag{font-size:0.6rem;font-weight:600;letter-spacing:.7px;text-transform:uppercase;padding:2px 7px;border-radius:20px;background:rgba(232,160,32,0.08);color:var(--accent);border:1px solid rgba(232,160,32,0.16)}
-.cstitle{font-size:0.92rem;font-weight:600;color:var(--white);margin-bottom:7px;letter-spacing:-0.2px}
-.cdesc{font-size:0.78rem;color:var(--muted);line-height:1.65;font-weight:300;overflow:hidden;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
-.clink{display:inline-block;margin-top:9px;font-size:0.74rem;color:var(--accent);text-decoration:none;font-weight:500}
+.ctag{font-size:0.58rem;font-weight:600;letter-spacing:.7px;text-transform:uppercase;padding:2px 7px;border-radius:20px;background:rgba(232,160,32,0.08);color:var(--accent);border:1px solid rgba(232,160,32,0.16)}
+.cstitle{font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:7px;letter-spacing:-0.2px}
+.cdesc{font-size:0.76rem;color:var(--muted);line-height:1.65;font-weight:300;overflow:hidden;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
+.clink{display:inline-block;margin-top:9px;font-size:0.72rem;color:var(--accent);text-decoration:none;font-weight:500}
 .clink:hover{opacity:.7}
 .cnav{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-top:1px solid var(--border);background:rgba(0,0,0,0.15)}
 .cdots{display:flex;gap:5px}
@@ -108,27 +117,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 .carrows{display:flex;gap:6px;align-items:center}
 .arrow{background:none;border:1px solid var(--border);color:var(--muted);width:28px;height:28px;border-radius:3px;cursor:pointer;font-size:0.85rem;transition:border-color .2s,color .2s;display:flex;align-items:center;justify-content:center;font-family:inherit}
 .arrow:hover{border-color:var(--accent);color:var(--accent)}
-.ccount{font-size:0.68rem;color:var(--muted)}
+.ccount{font-size:0.66rem;color:var(--muted)}
 
 /* CONTACT */
-#ct{background:var(--bg2);padding:76px 48px;border-top:1px solid var(--border)}
-.ctin{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+#ct{background:var(--bg2);padding:80px 52px;border-top:1px solid var(--border)}
+.ctin{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .cttitle{font-size:2rem;font-weight:700;color:var(--white);margin-bottom:12px;letter-spacing:-1px}
-.ctdesc{font-size:0.9rem;color:var(--muted);line-height:1.75;margin-bottom:26px;font-weight:300}
+.ctdesc{font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:26px;font-weight:300}
 .ctitems{display:flex;flex-direction:column;gap:13px}
-.ctitem{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text)}
+.ctitem{display:flex;align-items:center;gap:10px;font-size:0.86rem;color:var(--text)}
 .ctitem a{color:var(--text);text-decoration:none;transition:color .2s}
 .ctitem a:hover{color:var(--accent)}
 .ctdot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0}
-footer{padding:20px 48px;text-align:center;font-size:0.72rem;color:#333;max-width:1140px;margin:0 auto}
+footer{padding:22px 52px;text-align:center;font-size:0.7rem;color:#333;max-width:1160px;margin:0 auto}
 
-@media(max-width:900px){
-  .nav-links{gap:20px}.nav-links a{font-size:0.67rem}
+@media(max-width:960px){
+  .nav-links{gap:22px}.nav-links a{font-size:0.66rem}
 }
 @media(max-width:768px){
   nav{padding:0 18px}.nav-links{display:none}
-  #hero{padding:82px 22px 44px}.hero-grid{grid-template-columns:1fr}.hero-photo{display:none}
-  .wrap{padding:58px 22px}
+  #hero{padding:84px 22px 48px}.hero-grid{grid-template-columns:1fr}.hero-photo{display:none}
+  .wrap{padding:60px 22px}
   .vgrid,.about-grid{grid-template-columns:1fr}
   .cbody{grid-template-columns:1fr;height:auto}
   .cimg{height:200px}.cinfo{height:auto;padding:18px}
@@ -142,7 +151,7 @@ footer{padding:20px 48px;text-align:center;font-size:0.72rem;color:#333;max-widt
 <nav>
   <a href="#hero" class="nav-logo">G.<span>Simon</span></a>
   <ul class="nav-links">
-    <li><a href="#videos">Vidéo</a></li>
+    <li><a href="#videos">Vidéos</a></li>
     <li><a href="#communication">Communication &amp; Marketing</a></li>
     <li><a href="#design">Direction Artistique &amp; Design</a></li>
     <li><a href="#digital">Produit Digital &amp; Technique</a></li>
@@ -163,9 +172,9 @@ footer{padding:20px 48px;text-align:center;font-size:0.72rem;color:#333;max-widt
       </div>
       <p class="hero-desc">Parcours atypique : des sciences de l'éducation au digital. Une approche à la fois humaine, pédagogique et performante. Capable de rendre les choses claires, utiles et accessibles pour tous les publics.</p>
       <div class="hero-btns">
-        <a href="#ct" class="btn-solid">Me contacter</a>
-        <a href="https://linkedin.com/in/guillaume-simon7" class="btn-ghost" target="_blank">LinkedIn</a>
-        <a href="CV-Guillaume_SIMON-Digital.pdf" class="btn-ghost" target="_blank" download>Télécharger le CV</a>
+        <a href="#ct" class="btn-solid" onclick="gtag('event','click',{event_category:'CTA',event_label:'Me contacter'})">Me contacter</a>
+        <a href="https://linkedin.com/in/guillaume-simon7" class="btn-ghost" target="_blank" onclick="gtag('event','click',{event_category:'CTA',event_label:'LinkedIn'})">LinkedIn</a>
+        <a href="CV-Guillaume_SIMON-Digital.pdf" class="btn-ghost" target="_blank" download onclick="gtag('event','click',{event_category:'CTA',event_label:'CV Download'})">Télécharger mon CV</a>
       </div>
       <div class="hero-stats">
         <div><div class="stat-num">40+</div><div class="stat-label">Vidéos produites</div></div>
@@ -190,6 +199,7 @@ footer{padding:20px 48px;text-align:center;font-size:0.72rem;color:#333;max-widt
       <p>Double formation en sciences de l'éducation (Licence, Rennes 2) et en stratégie digitale (Master RNCP 7, équiv. HES, spécialisation direction artistique) : un parcours qui croise la pédagogie, la communication et la création.</p>
       <p>Chez Orange, j'ai piloté la communication digitale interne pour 15 000 collaborateurs, produit plus de 40 vidéos et accompagné le déploiement d'un outil IA. Chez 4Legacy, j'ai géré une communauté internationale, coordonné une équipe à distance et conçu des systèmes de jeu en lien avec la stratégie produit.</p>
       <p>Calme, rigoureux et autonome. J'aime les environnements variés et les projets qui demandent clarté et rigueur.</p>
+      <p class="about-note">Vous trouverez ici un aperçu de mes productions, qui ne représente qu'une partie de ce que je peux partager. N'hésitez pas à me contacter pour en savoir plus.</p>
     </div>
     <div class="pills">
       <span class="pill">Stratégie digitale</span><span class="pill">Direction artistique</span>
@@ -216,48 +226,48 @@ footer{padding:20px 48px;text-align:center;font-size:0.72rem;color:#333;max-widt
   </div>
   <div class="vgrid">
     <div class="vcard">
-      <a class="vthumb" href="https://www.youtube.com/watch?v=LMNyr0Jfpms" target="_blank" rel="noopener">
-        <img src="https://img.youtube.com/vi/LMNyr0Jfpms/mqdefault.jpg" alt="Communication interne - Événement" loading="lazy">
+      <div class="vthumb" id="vt-LMNyr0Jfpms" onclick="playV('LMNyr0Jfpms')">
+        <img src="https://img.youtube.com/vi/LMNyr0Jfpms/maxresdefault.jpg" alt="Communication interne - Événement" loading="lazy">
         <div class="vplay">
           <div class="vplay-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="vplay-label">Voir sur YouTube</div>
+          <div class="vplay-label">Lancer la vidéo</div>
         </div>
-      </a>
+      </div>
       <div class="vinfo"><div class="vsrc">Orange</div><div class="vlbl">Communication interne - Événement</div></div>
     </div>
     <div class="vcard">
-      <a class="vthumb" href="https://www.youtube.com/watch?v=yDHePW_Xqic" target="_blank" rel="noopener">
-        <img src="https://img.youtube.com/vi/yDHePW_Xqic/mqdefault.jpg" alt="Production vidéo interne" loading="lazy">
+      <div class="vthumb" id="vt-yDHePW_Xqic" onclick="playV('yDHePW_Xqic')">
+        <img src="https://img.youtube.com/vi/yDHePW_Xqic/maxresdefault.jpg" alt="Production vidéo interne" loading="lazy">
         <div class="vplay">
           <div class="vplay-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="vplay-label">Voir sur YouTube</div>
+          <div class="vplay-label">Lancer la vidéo</div>
         </div>
-      </a>
+      </div>
       <div class="vinfo"><div class="vsrc">Orange</div><div class="vlbl">Production vidéo interne</div></div>
     </div>
     <div class="vcard">
-      <a class="vthumb" href="https://www.youtube.com/watch?v=_BjFLZfI8ss" target="_blank" rel="noopener">
-        <img src="https://img.youtube.com/vi/_BjFLZfI8ss/mqdefault.jpg" alt="Contenu communication digitale" loading="lazy">
+      <div class="vthumb" id="vt-_BjFLZfI8ss" onclick="playV('_BjFLZfI8ss')">
+        <img src="https://img.youtube.com/vi/_BjFLZfI8ss/maxresdefault.jpg" alt="Contenu communication digitale" loading="lazy">
         <div class="vplay">
           <div class="vplay-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="vplay-label">Voir sur YouTube</div>
+          <div class="vplay-label">Lancer la vidéo</div>
         </div>
-      </a>
+      </div>
       <div class="vinfo"><div class="vsrc">Orange</div><div class="vlbl">Contenu communication digitale</div></div>
     </div>
     <div class="vcard">
-      <a class="vthumb" href="https://www.youtube.com/watch?v=xrSG7yMS4pU" target="_blank" rel="noopener">
-        <img src="https://img.youtube.com/vi/xrSG7yMS4pU/mqdefault.jpg" alt="Vidéo stratégie éditoriale" loading="lazy">
+      <div class="vthumb" id="vt-xrSG7yMS4pU" onclick="playV('xrSG7yMS4pU')">
+        <img src="https://img.youtube.com/vi/xrSG7yMS4pU/maxresdefault.jpg" alt="Vidéo stratégie éditoriale" loading="lazy">
         <div class="vplay">
           <div class="vplay-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="vplay-label">Voir sur YouTube</div>
+          <div class="vplay-label">Lancer la vidéo</div>
         </div>
-      </a>
+      </div>
       <div class="vinfo"><div class="vsrc">Orange</div><div class="vlbl">Vidéo stratégie éditoriale</div></div>
     </div>
     <div class="vcard">
       <div class="vthumb" id="vt-kH24NcbuOyY" onclick="playV('kH24NcbuOyY')">
-        <img src="https://img.youtube.com/vi/kH24NcbuOyY/mqdefault.jpg" alt="Contenu communautaire" loading="lazy">
+        <img src="https://img.youtube.com/vi/kH24NcbuOyY/maxresdefault.jpg" alt="Contenu communautaire" loading="lazy">
         <div class="vplay">
           <div class="vplay-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           <div class="vplay-label">Lancer la vidéo</div>
@@ -267,7 +277,7 @@ footer{padding:20px 48px;text-align:center;font-size:0.72rem;color:#333;max-widt
     </div>
     <div class="vcard">
       <div class="vthumb" id="vt-pnb4aQBVE6U" onclick="playV('pnb4aQBVE6U')">
-        <img src="https://img.youtube.com/vi/pnb4aQBVE6U/mqdefault.jpg" alt="Production vidéo communautaire" loading="lazy">
+        <img src="https://img.youtube.com/vi/pnb4aQBVE6U/maxresdefault.jpg" alt="Production vidéo communautaire" loading="lazy">
         <div class="vplay">
           <div class="vplay-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           <div class="vplay-label">Lancer la vidéo</div>
@@ -363,7 +373,7 @@ footer{padding:20px 48px;text-align:center;font-size:0.72rem;color:#333;max-widt
     <div>
       <div class="cttitle">Travaillons<br>ensemble.</div>
       <p class="ctdesc">Disponible pour des postes en communication, marketing digital, direction artistique ou pédagogie numérique. Basé au Bouveret (Valais), ouvert au télétravail et aux postes en Suisse romande.</p>
-      <a href="mailto:guillaume35.simon@gmail.com" class="btn-solid">Envoyer un email</a>
+      <a href="mailto:guillaume35.simon@gmail.com" class="btn-solid" onclick="gtag('event','click',{event_category:'Contact',event_label:'Email button'})">Envoyer un email</a>
     </div>
     <div class="ctitems">
       <div class="ctitem"><div class="ctdot"></div><span><a href="tel:0041772626234">077 262 62 34</a></span></div>
@@ -430,10 +440,10 @@ var DATA={};
 DATA["c4legacy"]=[{img:"patchnotes",tags:["Patch Notes", "\u00c9ditorial"],title:"Major Release 2.0 - Patch Notes",desc:"R\u00e9daction et mise en forme des patch notes : \u00e9quilibrage des classes, nouvelles m\u00e9caniques, mises \u00e0 jour du shop. Synth\u00e8se entre retours joueurs et d\u00e9cisions de l'\u00e9quipe de d\u00e9veloppement.",link:"",ll:""},{img:"discord_server",tags:["Discord", "Community"],title:"Serveur Discord 4Legacy",desc:"Organisation compl\u00e8te du serveur Discord : channels th\u00e9matiques (support, patch-notes, \u00e9v\u00e9nements, guides), mod\u00e9ration, r\u00e8gles communautaires et animation r\u00e9guli\u00e8re.",link:"",ll:""},{img:"ban_system",tags:["Mod\u00e9ration", "Back-office"],title:"Syst\u00e8me de mod\u00e9ration",desc:"Interface de mod\u00e9ration : filtres par type d'infraction, historique des conversations, syst\u00e8me de ban permanent ou limit\u00e9 avec option HWID. Gestion rigoureuse de la s\u00e9curit\u00e9 communautaire.",link:"",ll:""},{img:"patch_discord",tags:["Communication", "Annonce"],title:"Annonces sur Discord",desc:"Annonces structur\u00e9es des mises \u00e0 jour sur le Discord communautaire. Format clair avec tags et cat\u00e9gories pour faciliter la lecture des joueurs.",link:"",ll:""}];
 DATA["corange"]=[{img:"orange_jo",tags:["Orange", "R\u00e9seaux sociaux", "JO 2024"],title:"Visuel JO Paris 2024",desc:"Cr\u00e9ation graphique pour Orange Pays Loire lors des Jeux Olympiques 2024. Int\u00e9gration de la mascotte officielle, adaptation aux codes visuels Orange et au format r\u00e9seaux sociaux.",link:"https://x.com/OrangePaysLoire",ll:"Voir sur X"},{img:"orange_grand_ouest",tags:["Orange", "Infographie", "Territoire"],title:"Carte Orange Grand Ouest",desc:"Infographie du territoire Orange Grand Ouest : repr\u00e9sentation des 8 mailles, 118 boutiques et pr\u00e9sence dans les d\u00e9partements. Support de communication interne pour les dirigeants.",link:"",ll:""},{img:"orange_avent1",tags:["Orange", "Calendrier", "\u00c9v\u00e9nement"],title:"Calendrier de l'Avent - Jour 1",desc:"Conception et production des visuels du calendrier de l'Avent Orange. Chaque visuel respecte la charte tout en cr\u00e9ant une atmosph\u00e8re festive. Production quotidienne de contenu.",link:"",ll:""},{img:"orange_avent2",tags:["Orange", "Jeu concours"],title:"Calendrier de l'Avent - Jeu concours",desc:"Format carr\u00e9 optimis\u00e9 r\u00e9seaux sociaux internes et externes. \u00c9quilibre entre identit\u00e9 visuelle de marque et cr\u00e9ativit\u00e9 saisonni\u00e8re.",link:"",ll:""}];
 DATA["cdcstart"]=[{img:"bp_persona",tags:["Marketing", "Personas"],title:"\u00c9tude de personas",desc:"Analyse des profils utilisateurs cibles : d\u00e9finition des personas (Lucas, Emma, Antoine, L\u00e9a), identification de leurs attentes, comportements d'achat et pr\u00e9f\u00e9rences. Base de la strat\u00e9gie marketing.",link:"",ll:""},{img:"bp_bmc",tags:["Business Model", "Canvas"],title:"Business Model Canvas",desc:"Business Model Canvas complet : activit\u00e9s cl\u00e9s, partenaires, propositions de valeur, segments clients et sources de revenus. Vision globale de la strat\u00e9gie commerciale de Reborn Production.",link:"",ll:""},{img:"bp_porter",tags:["Analyse", "Porter", "Concurrence"],title:"5 forces de Porter",desc:"Analyse concurrentielle selon le mod\u00e8le de Porter : rivalit\u00e9 entre concurrents, pouvoir des fournisseurs et clients, menace des nouveaux entrants et des produits de substitution.",link:"",ll:""},{img:"bp_copy",tags:["Copy Strategy", "Communication"],title:"Copy strategy",desc:"Document de r\u00e9f\u00e9rence d\u00e9finissant le message de marque, le ton \u00e9ditorial et les axes de communication. Cadre strat\u00e9gique pour l'ensemble des contenus Reborn Production.",link:"",ll:""},{img:"bp_objectifs",tags:["Objectifs", "KPI", "Commercial"],title:"Objectifs commerciaux et KPIs",desc:"Plan commercial avec objectifs SMART, indicateurs de performance et jalons de d\u00e9veloppement sur 3 ans.",link:"",ll:""}];
-DATA["dreborn"]=[{img:"reborn_charte2",tags:["Logo", "Branding", "Variations"],title:"Logo et d\u00e9clinaisons",desc:"Conception du logo Reborn Production avec le phoenix comme symbole de renaissance. Trois versions A/B/C selon l'avancement des jeux (Alpha, Beta, Complete). R\u00e8gles d'usage selon le fond et les supports.",link:"",ll:""},{img:"reborn_charte1",tags:["Charte graphique", "Couleurs", "Typo"],title:"Charte graphique - Couleurs et typographie",desc:"D\u00e9finition de la palette chromatique (noir, blanc, rouge, orange, jaune, bleu marine, violet) et des typographies (Lato principal, Source Sans Pro secondaire). R\u00e8gles de coh\u00e9sion visuelle sur tous les supports.",link:"",ll:""},{img:"vs_old_new",tags:["Social Media", "Engagement"],title:"Contenu social media",desc:"Contenu engageant pour les r\u00e9seaux sociaux de Reborn Production. Format comparatif Old vs New con\u00e7u pour maximiser les interactions et la participation de la communaut\u00e9.",link:"",ll:""}];
-DATA["dnatura"]=[{img:"natura_concept",tags:["Concept Board", "Direction artistique"],title:"Concept Board Natura+",desc:"Concept board complet : recherche typographique (Proxima Nova, Brush Script), palette chromatique, r\u00e9f\u00e9rences visuelles et mockup. Base directrice avant ex\u00e9cution sur InDesign.",link:"",ll:""},{img:"natura_recto",tags:["Print", "InDesign", "Recto"],title:"\u00c9tiquette recto - Finalis\u00e9e sur InDesign",desc:"\u00c9tiquette recto : illustration montagne en flat design bleu et cr\u00e8me, typographie en arc pour le nom du domaine, certification Agriculture Biologique. \u00c9quilibre entre lisibilit\u00e9 et identit\u00e9 visuelle forte.",link:"",ll:""},{img:"natura_verso",tags:["Print", "InDesign", "Verso"],title:"\u00c9tiquette verso - Informations produit",desc:"Verso de l'\u00e9tiquette : informations techniques (c\u00e9pages, \u00e9levage, terroir), logo DO(AOC), code-barres et mentions l\u00e9gales. Design sobre sur fond cr\u00e8me pour privil\u00e9gier la lisibilit\u00e9.",link:"",ll:""}];
-DATA["dvinyle"]=[{img:"vinyle_cover",tags:["Illustration", "Pochette"],title:"Pochette recto",desc:"Conception de la pochette recto pour la playlist orchestrale de 4Legacy. Univers m\u00e9di\u00e9val-fantastique avec dragon, magicien f\u00e9lin, soldat et chim\u00e8re. Typographie Mephisto coh\u00e9rente avec l'identit\u00e9 du jeu.",link:"",ll:""},{img:"vinyle_verso",tags:["Print", "Tracklist"],title:"Pochette verso - Tracklist",desc:"Verso de la pochette : tracklist Face A et Face B, design sobre et fonctionnel. Continuit\u00e9 visuelle avec le recto tout en pr\u00e9servant la lisibilit\u00e9 des informations.",link:"",ll:""},{img:"vinyle_macarons",tags:["Photoshop", "Macarons"],title:"Macarons du vinyle",desc:"Conception des macarons (labels du vinyle) : screenshot du jeu retravaill\u00e9 sur Photoshop, accentuation de nettet\u00e9, lettres A et B en typographie Mephisto pour identifier chaque face.",link:"",ll:""},{img:"vinyle_livret",tags:["Livret", "Format A5"],title:"Livret A5",desc:"Livret accompagnant le vinyle en format A5. Premi\u00e8re page avec personnage du jeu, paysage en arri\u00e8re-plan et titre Playlist. Contient tracklist, cr\u00e9dits et QR codes.",link:"",ll:""},{img:"vinyle_credits",tags:["Cr\u00e9dits", "QR Code"],title:"Page cr\u00e9dits",desc:"Page de cr\u00e9dits : liste des 10 artistes compositeurs, QR codes vers le site et Discord, code d'acc\u00e8s pour contenu num\u00e9rique exclusif et invitation festival m\u00e9di\u00e9val.",link:"",ll:""},{img:"vinyle_overview",tags:["Vue d'ensemble", "Pr\u00e9sentation"],title:"Vue d'ensemble du projet",desc:"Pr\u00e9sentation compl\u00e8te : pochette recto, verso et vinyle 33 tours. Projet complet avec livret A5 et macarons. R\u00e9alis\u00e9 dans le cadre du Master.",link:"",ll:""}];
-DATA["dux"]=[{img:"ux_shop",tags:["Audit UX", "E-commerce"],title:"Audit boutique 4Legacy - Moonstone Shop",desc:"Audit UX/UI de la boutique en jeu : identification des incoh\u00e9rences de prix, proposition de restructuration des paliers, refonte de la logique de bonus. Objectif : am\u00e9liorer la conversion et r\u00e9duire la friction.",link:"",ll:""},{img:"ux_mobile",tags:["UX", "Mobile", "Wireframe"],title:"Suggestion UX mobile",desc:"Proposition d'am\u00e9lioration de l'interface mobile : Sticky Info Block en haut, scrollbar horizontale pour les cat\u00e9gories, liste verticale dynamique. Conception bas\u00e9e sur l'analyse des parcours utilisateurs.",link:"",ll:""},{img:"wireframe_dc",tags:["Wireframe", "Adobe XD"],title:"Wireframe basse fid\u00e9lit\u00e9 - DC Start",desc:"Wireframes de l'interface Reborn Production sur Adobe XD. Architecture de l'information, placement des \u00e9l\u00e9ments, navigation et parcours utilisateur.",link:"https://xd.adobe.com/view/2760e4d6-1c5e-4ef8-ac6a-6a8a4814b5c2-7233/",ll:"Voir wireframe complet"},{img:"maquette_dc",tags:["Maquette", "UI Design"],title:"Maquette haute fid\u00e9lit\u00e9",desc:"Maquette haute fid\u00e9lit\u00e9 : interface compl\u00e8te avec identit\u00e9 visuelle, couleurs, typographies et \u00e9l\u00e9ments interactifs. Navigation fonctionnelle sur Adobe XD.",link:"https://xd.adobe.com/view/6836aa5e-9365-479b-8438-f6ccedfc046e-3d65/",ll:"Voir maquette complète"},{img:"wireframe_fitness",tags:["UX", "Comparatif"],title:"Wireframe vs Maquette - FitnessTime",desc:"Exercice complet de conception UX : wireframe structurel en parall\u00e8le de la maquette finale. D\u00e9marche rigoureuse : structure d'abord, design ensuite.",link:"",ll:""}];
+DATA["dreborn"]=[{img:"reborn_charte2",tags:["Logo", "Branding", "Variations"],title:"Logo et d\u00e9clinaisons",desc:"Conception du logo Reborn Production avec le phoenix comme symbole de renaissance. Trois versions A/B/C selon l'avancement des jeux. R\u00e8gles d'usage selon le fond et les supports.",link:"",ll:""},{img:"reborn_charte1",tags:["Charte graphique", "Couleurs", "Typo"],title:"Charte graphique - Couleurs et typographie",desc:"D\u00e9finition de la palette chromatique et des typographies (Lato principal, Source Sans Pro secondaire). R\u00e8gles de coh\u00e9sion visuelle sur tous les supports.",link:"",ll:""},{img:"vs_old_new",tags:["Social Media", "Engagement"],title:"Contenu social media",desc:"Contenu engageant pour les r\u00e9seaux sociaux de Reborn Production. Format comparatif Old vs New con\u00e7u pour maximiser les interactions et la participation de la communaut\u00e9.",link:"",ll:""}];
+DATA["dnatura"]=[{img:"natura_concept",tags:["Concept Board", "Direction artistique"],title:"Concept Board Natura+",desc:"Concept board complet : recherche typographique, palette chromatique, r\u00e9f\u00e9rences visuelles et mockup. Base directrice avant ex\u00e9cution sur InDesign.",link:"",ll:""},{img:"natura_recto",tags:["Print", "InDesign", "Recto"],title:"\u00c9tiquette recto",desc:"\u00c9tiquette recto : illustration montagne en flat design bleu et cr\u00e8me, typographie en arc pour le nom du domaine, certification Agriculture Biologique.",link:"",ll:""},{img:"natura_verso",tags:["Print", "InDesign", "Verso"],title:"\u00c9tiquette verso",desc:"Verso : informations techniques (c\u00e9pages, \u00e9levage, terroir), logo DO(AOC), code-barres et mentions l\u00e9gales. Design sobre sur fond cr\u00e8me pour privil\u00e9gier la lisibilit\u00e9.",link:"",ll:""}];
+DATA["dvinyle"]=[{img:"vinyle_cover",tags:["Illustration", "Pochette"],title:"Pochette recto",desc:"Conception de la pochette recto pour la playlist orchestrale de 4Legacy. Univers m\u00e9di\u00e9val-fantastique avec dragon, magicien f\u00e9lin, soldat et chim\u00e8re.",link:"",ll:""},{img:"vinyle_verso",tags:["Print", "Tracklist"],title:"Pochette verso",desc:"Tracklist Face A et Face B, design sobre et fonctionnel. Continuit\u00e9 visuelle avec le recto.",link:"",ll:""},{img:"vinyle_macarons",tags:["Photoshop", "Macarons"],title:"Macarons du vinyle",desc:"Macarons retravaill\u00e9s sur Photoshop, typographie Mephisto pour identifier chaque face.",link:"",ll:""},{img:"vinyle_livret",tags:["Livret", "Format A5"],title:"Livret A5",desc:"Livret A5 : personnage du jeu, paysage en arri\u00e8re-plan, tracklist, cr\u00e9dits et QR codes.",link:"",ll:""},{img:"vinyle_credits",tags:["Cr\u00e9dits", "QR Code"],title:"Page cr\u00e9dits",desc:"Cr\u00e9dits : 10 artistes compositeurs, QR codes vers le site et Discord, code d'acc\u00e8s num\u00e9rique exclusif.",link:"",ll:""},{img:"vinyle_overview",tags:["Vue d'ensemble"],title:"Vue d'ensemble du projet",desc:"Pr\u00e9sentation compl\u00e8te : pochette recto, verso et vinyle 33 tours. Livret A5 et macarons inclus.",link:"",ll:""}];
+DATA["dux"]=[{img:"ux_shop",tags:["Audit UX", "E-commerce"],title:"Audit boutique 4Legacy",desc:"Audit UX/UI de la boutique : incoh\u00e9rences de prix, restructuration des paliers, refonte de la logique de bonus pour am\u00e9liorer la conversion.",link:"",ll:""},{img:"ux_mobile",tags:["UX", "Mobile"],title:"Suggestion UX mobile",desc:"Am\u00e9lioration de l'interface mobile : Sticky Info Block, scrollbar horizontale pour les cat\u00e9gories, liste verticale dynamique.",link:"",ll:""},{img:"wireframe_dc",tags:["Wireframe", "Adobe XD"],title:"Wireframe basse fid\u00e9lit\u00e9 - DC Start",desc:"Architecture de l'information, placement des \u00e9l\u00e9ments, navigation et parcours utilisateur.",link:"https://xd.adobe.com/view/2760e4d6-1c5e-4ef8-ac6a-6a8a4814b5c2-7233/",ll:"Voir wireframe complet"},{img:"maquette_dc",tags:["Maquette", "UI Design"],title:"Maquette haute fid\u00e9lit\u00e9",desc:"Interface compl\u00e8te avec identit\u00e9 visuelle, couleurs, typographies et \u00e9l\u00e9ments interactifs.",link:"https://xd.adobe.com/view/6836aa5e-9365-479b-8438-f6ccedfc046e-3d65/",ll:"Voir maquette complète"},{img:"wireframe_fitness",tags:["UX", "Comparatif"],title:"Wireframe vs Maquette - FitnessTime",desc:"Wireframe structurel en parall\u00e8le de la maquette finale. D\u00e9marche rigoureuse : structure d'abord, design ensuite.",link:"",ll:""}];
 
 var ST={};
 Object.keys(DATA).forEach(function(id){ST[id]=0;render(id);});
@@ -466,6 +476,7 @@ function playV(id){
   w.className='viframe';
   w.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allowfullscreen allow="autoplay;encrypted-media"></iframe>';
   par.replaceChild(w,el);
+  gtag('event','video_play',{event_category:'Video',event_label:id});
 }
 </script>
 </body>
