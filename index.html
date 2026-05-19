@@ -90,7 +90,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 .cdesc{font-size:0.76rem;color:var(--muted);line-height:1.65;font-weight:300;overflow:hidden;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
 .clink{display:inline-block;margin-top:9px;font-size:0.72rem;color:var(--accent);text-decoration:none;font-weight:500}
 .clink:hover{opacity:.7}
-.cmore{display:none;background:none;border:none;color:var(--accent);font-size:0.7rem;font-weight:500;cursor:pointer;padding:6px 0 0;font-family:inherit;text-align:left}
+.cmore{display:none;background:none;border:none;color:var(--muted);font-size:0.68rem;font-weight:400;cursor:pointer;padding:6px 0 0;font-family:inherit;text-align:left;text-decoration:underline;text-underline-offset:2px;opacity:0.75}
 .cmore:hover{opacity:.7}
 @media(max-width:768px){.cmore{display:block}}
 .cinfo.expanded{height:auto!important;min-height:auto!important;overflow:visible!important}
@@ -411,7 +411,7 @@ function render(id){
   ie.innerHTML='<img src="'+IMGS[sl.img]+'" alt="'+sl.title+'" loading="lazy">';
   var tags=sl.tags.map(function(t){return '<span class="ctag">'+t+'</span>';}).join('');
   var lnk=sl.link?'<a href="'+sl.link+'" class="clink" target="_blank">'+sl.ll+' &#8594;</a>':'';
-  var cinfo=document.getElementById(id+"-t");if(cinfo&&cinfo.parentElement&&cinfo.parentElement.classList)cinfo.parentElement.classList.remove('expanded');
+  var cinfo=document.getElementById(id+"-t");if(cinfo&&cinfo.classList)cinfo.classList.remove('expanded');
   te.innerHTML='<div class="ctags">'+tags+'</div><div class="cstitle">'+sl.title+'</div><div class="cdesc">'+sl.desc+'</div><button class="cmore" onclick="toggleMore(this)">Voir plus ↓</button>'+lnk;
   de.innerHTML='';
   for(var i=0;i<n;i++){(function(i2){var d=document.createElement('div');d.className='dot'+(i2===idx?' on':'');d.onclick=function(){ST[id]=i2;render(id);};de.appendChild(d);})(i);}
