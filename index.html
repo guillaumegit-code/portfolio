@@ -417,6 +417,14 @@ function render(id){
   for(var i=0;i<n;i++){(function(i2){var d=document.createElement('div');d.className='dot'+(i2===idx?' on':'');d.onclick=function(){ST[id]=i2;render(id);};de.appendChild(d);})(i);}
   ce.textContent=(idx+1)+' / '+n;
 }
+var VIDEO_LABELS={
+  "LMNyr0Jfpms":"Communication_interne_Evenement",
+  "yDHePW_Xqic":"Production_video_interne",
+  "_BjFLZfI8ss":"Contenu_communication_digitale",
+  "xrSG7yMS4pU":"Video_strategie_editoriale",
+  "kH24NcbuOyY":"Contenu_communautaire",
+  "pnb4aQBVE6U":"Production_video_communautaire"
+};
 var CAROUSEL_LABELS={
   "c4legacy":"4Legacy",
   "corange":"Orange",
@@ -427,8 +435,8 @@ var CAROUSEL_LABELS={
   "dux":"UX_UI",
   "dpc":"PC_Tech"
 };
-function next(id){var n=DATA[id].length;ST[id]=(ST[id]+1)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_next',{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
-function prev(id){var n=DATA[id].length;ST[id]=(ST[id]-1+n)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_prev',{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
+function next(id){var n=DATA[id].length;ST[id]=(ST[id]+1)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_next_'+lbl,{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
+function prev(id){var n=DATA[id].length;ST[id]=(ST[id]-1+n)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_prev_'+lbl,{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
 function toggleMore(btn){
   var ci=btn.closest('.cinfo');
   if(ci.classList.contains('expanded')){
@@ -445,7 +453,7 @@ function playV(id){
   w.className='viframe';
   w.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allowfullscreen allow="autoplay;encrypted-media"></iframe>';
   par.replaceChild(w,el);
-  gtag('event','video_play',{event_category:'Video',event_label:id});
+  gtag('event','video_play_'+(VIDEO_LABELS[id]||id),{event_category:'Video',event_label:VIDEO_LABELS[id]||id});
 }
 </script>
 </body>
