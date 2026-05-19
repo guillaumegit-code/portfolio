@@ -90,6 +90,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 .cdesc{font-size:0.76rem;color:var(--muted);line-height:1.65;font-weight:300;overflow:hidden;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
 .clink{display:inline-block;margin-top:9px;font-size:0.72rem;color:var(--accent);text-decoration:none;font-weight:500}
 .clink:hover{opacity:.7}
+.cmore{display:none;background:none;border:none;color:var(--accent);font-size:0.7rem;font-weight:500;cursor:pointer;padding:6px 0 0;font-family:inherit;text-align:left}
+.cmore:hover{opacity:.7}
+@media(max-width:768px){.cmore{display:block}}
+.cinfo.expanded{height:auto!important;min-height:auto!important;overflow:visible!important}
+.cinfo.expanded .cdesc{-webkit-line-clamp:unset;overflow:visible;display:block}
 .cnav{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-top:1px solid var(--border);background:rgba(0,0,0,0.15)}
 .cdots{display:flex;gap:5px}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--border);cursor:pointer;transition:background .2s}
@@ -406,7 +411,8 @@ function render(id){
   ie.innerHTML='<img src="'+IMGS[sl.img]+'" alt="'+sl.title+'" loading="lazy">';
   var tags=sl.tags.map(function(t){return '<span class="ctag">'+t+'</span>';}).join('');
   var lnk=sl.link?'<a href="'+sl.link+'" class="clink" target="_blank">'+sl.ll+' &#8594;</a>':'';
-  te.innerHTML='<div class="ctags">'+tags+'</div><div class="cstitle">'+sl.title+'</div><div class="cdesc">'+sl.desc+'</div>'+lnk;
+  var cinfo=document.getElementById(id+"-t");if(cinfo&&cinfo.parentElement&&cinfo.parentElement.classList)cinfo.parentElement.classList.remove('expanded');
+  te.innerHTML='<div class="ctags">'+tags+'</div><div class="cstitle">'+sl.title+'</div><div class="cdesc">'+sl.desc+'</div><button class="cmore" onclick="toggleMore(this)">Voir plus ↓</button>'+lnk;
   de.innerHTML='';
   for(var i=0;i<n;i++){(function(i2){var d=document.createElement('div');d.className='dot'+(i2===idx?' on':'');d.onclick=function(){ST[id]=i2;render(id);};de.appendChild(d);})(i);}
   ce.textContent=(idx+1)+' / '+n;
@@ -423,6 +429,16 @@ var CAROUSEL_LABELS={
 };
 function next(id){var n=DATA[id].length;ST[id]=(ST[id]+1)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_next',{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
 function prev(id){var n=DATA[id].length;ST[id]=(ST[id]-1+n)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_prev',{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
+function toggleMore(btn){
+  var ci=btn.closest('.cinfo');
+  if(ci.classList.contains('expanded')){
+    ci.classList.remove('expanded');
+    btn.textContent='Voir plus ↓';
+  } else {
+    ci.classList.add('expanded');
+    btn.textContent='Voir moins ↑';
+  }
+}
 function playV(id){
   var el=document.getElementById('vt-'+id);if(!el)return;
   var par=el.parentElement,w=document.createElement('div');
