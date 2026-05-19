@@ -411,8 +411,18 @@ function render(id){
   for(var i=0;i<n;i++){(function(i2){var d=document.createElement('div');d.className='dot'+(i2===idx?' on':'');d.onclick=function(){ST[id]=i2;render(id);};de.appendChild(d);})(i);}
   ce.textContent=(idx+1)+' / '+n;
 }
-function next(id){var n=DATA[id].length;ST[id]=(ST[id]+1)%n;render(id);}
-function prev(id){var n=DATA[id].length;ST[id]=(ST[id]-1+n)%n;render(id);}
+var CAROUSEL_LABELS={
+  "c4legacy":"4Legacy",
+  "corange":"Orange",
+  "cdcstart":"DC_Start_BusinessPlan",
+  "dreborn":"Reborn_Production",
+  "dnatura":"Natura_Plus",
+  "dvinyle":"Vinyle_4Legacy",
+  "dux":"UX_UI",
+  "dpc":"PC_Tech"
+};
+function next(id){var n=DATA[id].length;ST[id]=(ST[id]+1)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_next',{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
+function prev(id){var n=DATA[id].length;ST[id]=(ST[id]-1+n)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_prev',{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
 function playV(id){
   var el=document.getElementById('vt-'+id);if(!el)return;
   var par=el.parentElement,w=document.createElement('div');
