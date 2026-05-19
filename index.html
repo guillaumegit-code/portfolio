@@ -116,7 +116,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 footer{padding:22px 52px;text-align:center;font-size:0.7rem;color:#333;max-width:1160px;margin:0 auto}
 @media(max-width:960px){.nav-links{gap:22px}.nav-links a{font-size:0.66rem}}
 @media(max-width:768px){
-  nav{padding:0 18px}.nav-links{display:none}
+  nav{padding:0 18px}
+  .nav-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:110}
+  .nav-burger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all .25s}
+  .nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-burger.open span:nth-child(2){opacity:0}
+  .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .nav-links{display:none;position:fixed;top:62px;left:0;right:0;background:rgba(10,10,10,0.98);border-bottom:1px solid var(--border);flex-direction:column;align-items:flex-start;padding:12px 0;z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links li a{display:block;padding:14px 24px;font-size:0.8rem;letter-spacing:1px}
   #hero{padding:84px 22px 48px}.hero-grid{grid-template-columns:1fr}.hero-photo{display:none}
   .wrap{padding:60px 22px}
   .vgrid,.about-grid{grid-template-columns:1fr}
@@ -130,11 +139,14 @@ footer{padding:22px 52px;text-align:center;font-size:0.7rem;color:#333;max-width
 <nav>
   <a href="#hero" class="nav-logo" onclick="gtag('event','clic_nav_logo',{event_category:'Nav'});">G.<span>Simon</span></a>
   <ul class="nav-links">
-    <li><a href="#videos" onclick="gtag('event','clic_nav_videos',{event_category:'Nav'});">Vidéos</a></li>
-    <li><a href="#communication" onclick="gtag('event','clic_nav_communication',{event_category:'Nav'});">Communication &amp; Marketing</a></li>
-    <li><a href="#design" onclick="gtag('event','clic_nav_design',{event_category:'Nav'});">Direction Artistique &amp; Design</a></li>
-    <li><a href="#digital" onclick="gtag('event','clic_nav_digital',{event_category:'Nav'});">Produit Digital &amp; Technique</a></li>
+    <li><a href="#videos" onclick="gtag('event','clic_nav_videos',{event_category:'Nav'});closeNav();">Vidéos</a></li>
+    <li><a href="#communication" onclick="gtag('event','clic_nav_communication',{event_category:'Nav'});closeNav();">Communication &amp; Marketing</a></li>
+    <li><a href="#design" onclick="gtag('event','clic_nav_design',{event_category:'Nav'});closeNav();">Direction Artistique &amp; Design</a></li>
+    <li><a href="#digital" onclick="gtag('event','clic_nav_digital',{event_category:'Nav'});closeNav();">Produit Digital &amp; Technique</a></li>
   </ul>
+  <button class="nav-burger" id="nav-burger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div id="hero">
@@ -437,6 +449,18 @@ var CAROUSEL_LABELS={
 };
 function next(id){var n=DATA[id].length;ST[id]=(ST[id]+1)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_next_'+lbl,{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
 function prev(id){var n=DATA[id].length;ST[id]=(ST[id]-1+n)%n;render(id);var lbl=CAROUSEL_LABELS[id]||id;gtag('event','carousel_prev_'+lbl,{event_category:'Carousel',event_label:lbl,carousel_id:id,slide_index:ST[id]});}
+function toggleNav(){
+  var burger=document.getElementById('nav-burger');
+  var links=document.querySelector('.nav-links');
+  burger.classList.toggle('open');
+  links.classList.toggle('open');
+}
+function closeNav(){
+  var burger=document.getElementById('nav-burger');
+  var links=document.querySelector('.nav-links');
+  burger.classList.remove('open');
+  links.classList.remove('open');
+}
 function toggleMore(btn){
   var ci=btn.closest('.cinfo');
   if(ci.classList.contains('expanded')){
