@@ -128,12 +128,12 @@ footer{padding:22px 52px;text-align:center;font-size:0.7rem;color:#333;max-width
 </head>
 <body>
 <nav>
-  <a href="#hero" class="nav-logo">G.<span>Simon</span></a>
+  <a href="#hero" class="nav-logo" onclick="gtag('event','clic_nav_logo',{event_category:'Nav'});">G.<span>Simon</span></a>
   <ul class="nav-links">
-    <li><a href="#videos">Vidéos</a></li>
-    <li><a href="#communication">Communication &amp; Marketing</a></li>
-    <li><a href="#design">Direction Artistique &amp; Design</a></li>
-    <li><a href="#digital">Produit Digital &amp; Technique</a></li>
+    <li><a href="#videos" onclick="gtag('event','clic_nav_videos',{event_category:'Nav'});">Vidéos</a></li>
+    <li><a href="#communication" onclick="gtag('event','clic_nav_communication',{event_category:'Nav'});">Communication &amp; Marketing</a></li>
+    <li><a href="#design" onclick="gtag('event','clic_nav_design',{event_category:'Nav'});">Direction Artistique &amp; Design</a></li>
+    <li><a href="#digital" onclick="gtag('event','clic_nav_digital',{event_category:'Nav'});">Produit Digital &amp; Technique</a></li>
   </ul>
 </nav>
 
@@ -151,9 +151,9 @@ footer{padding:22px 52px;text-align:center;font-size:0.7rem;color:#333;max-width
       </div>
       <p class="hero-desc">Parcours atypique : des sciences de l'éducation au digital. Une approche à la fois humaine, pédagogique et performante. Capable de rendre les choses claires, utiles et accessibles pour tous les publics.</p>
       <div class="hero-btns">
-        <a href="#ct" class="btn-solid" onclick="gtag('event','click',{event_category:'CTA',event_label:'Me contacter'})">Me contacter</a>
-        <a href="https://linkedin.com/in/guillaume-simon7" class="btn-ghost" target="_blank" onclick="gtag('event','click',{event_category:'CTA',event_label:'LinkedIn'})">LinkedIn</a>
-        <a href="CV-Guillaume_SIMON-Digital.pdf" class="btn-ghost" target="_blank" download onclick="gtag('event','click',{event_category:'CTA',event_label:'CV Download'})">Télécharger mon CV</a>
+        <a href="#ct" class="btn-solid" onclick="gtag('event','clic_btn_me_contacter',{event_category:'CTA',event_label:'Me contacter'})">Me contacter</a>
+        <a href="https://linkedin.com/in/guillaume-simon7" class="btn-ghost" target="_blank" onclick="gtag('event','clic_btn_linkedin',{event_category:'CTA',event_label:'LinkedIn'})">LinkedIn</a>
+        <a href="CV-Guillaume_SIMON-Digital.pdf" class="btn-ghost" target="_blank" download onclick="gtag('event','clic_btn_telecharger_cv',{event_category:'CTA',event_label:'CV Download'})">Télécharger mon CV</a>
       </div>
       <div class="hero-stats">
         <div><div class="stat-num">40+</div><div class="stat-label">Vidéos produites</div></div>
@@ -328,7 +328,7 @@ footer{padding:22px 52px;text-align:center;font-size:0.7rem;color:#333;max-width
   <div class="ctin">
     <div class="cttitle">Travaillons<br>ensemble.</div>
     <p class="ctdesc">Disponible pour des postes en communication, marketing digital, direction artistique ou pédagogie numérique. Basé au Bouveret (Valais), ouvert au télétravail et aux postes en Suisse romande.</p>
-    <div class="ct-btn-wrap"><a href="mailto:guillaume35.simon@gmail.com" class="btn-solid" onclick="gtag('event','click',{event_category:'Contact',event_label:'Email'})">Envoyer un email</a></div>
+    <div class="ct-btn-wrap"><a href="mailto:guillaume35.simon@gmail.com" class="btn-solid" onclick="gtag('event','clic_btn_email',{event_category:'Contact',event_label:'Email'})">Envoyer un email</a></div>
     <div class="ctitems">
       <div class="ctitem"><div class="ctdot"></div><span><a href="tel:0041772626234">077 262 62 34</a></span></div>
       <div class="ctitem"><div class="ctdot"></div><span><a href="mailto:guillaume35.simon@gmail.com">guillaume35.simon@gmail.com</a></span></div>
